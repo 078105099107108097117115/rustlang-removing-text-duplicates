@@ -4,5 +4,5 @@ fn main() {
     let text2 = "This is is something";
 
     println!("{}", replace_duplicate(text1));
-    println!("{}",replace_duplicate(text2));
+    println!("{}", replace_duplicate(text2));
 }

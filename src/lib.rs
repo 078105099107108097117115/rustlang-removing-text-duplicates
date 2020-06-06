@@ -17,6 +17,7 @@ mod test {
         let some_text_with_duplicates = "This is is something";
         assert_eq!(
             replace_duplicate(some_text_with_duplicates),
-            "This is something".to_string());
+            "This is something".to_string()
+        );
     }
 }
