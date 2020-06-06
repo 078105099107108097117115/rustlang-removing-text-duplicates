@@ -1,0 +1,16 @@
+language : rust
+rust:
+  - stable
+  - nightly
+install:
+  - rustup component add clippy
+  - rustup component add rustfmt
+matrix:
+  allow_failures:
+  - rust: nightly
+script:
+  - cargo fmt -- --check
+  - touch ./src/main.rs && touch ./src/lib.rs && cargo clippy -- -D warnings
+  - cargo check
+  - cargo build --verbose --all
+  - cargo test --verbose --all
